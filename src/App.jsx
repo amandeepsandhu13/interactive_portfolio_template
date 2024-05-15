@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import { CORE_CONCEPTS } from "./data.js";
+import { CORE_PROJECTS } from "./data.js";
 
 
 
@@ -9,7 +9,7 @@ import { CORE_CONCEPTS } from "./data.js";
 
 function CoreConcept(props){
   return(
-    <li><img src={props.image} alt="" />
+    <li><img src={props.image} alt="props.title" />
         <h3>{props.title}</h3>
         <p>{props.description}</p>
     </li>
@@ -24,21 +24,18 @@ function App() {
         <section id = "core-concepts">
         <h2>Projects</h2>
           <ul>
-            <CoreConcept title = {CORE_CONCEPTS[0].title}
-                           image = {CORE_CONCEPTS[0].image}
-                           description = {CORE_CONCEPTS[0].description}
+            <CoreConcept {...CORE_PROJECTS[0]} />
+            <CoreConcept title = {CORE_PROJECTS[1].title}
+                           image = {CORE_PROJECTS[1].image}
+                           description = {CORE_PROJECTS[1].description}
             />
-            <CoreConcept title = {CORE_CONCEPTS[1].title}
-                           image = {CORE_CONCEPTS[1].image}
-                           description = {CORE_CONCEPTS[1].description}
+             <CoreConcept title = {CORE_PROJECTS[2].title}
+                           image = {CORE_PROJECTS[2].image}
+                           description = {CORE_PROJECTS[2].description}
             />
-             <CoreConcept title = {CORE_CONCEPTS[2].title}
-                           image = {CORE_CONCEPTS[2].image}
-                           description = {CORE_CONCEPTS[2].description}
-            />
-            <CoreConcept title = {CORE_CONCEPTS[3].title}
-                           image = {CORE_CONCEPTS[3].image}
-                           description = {CORE_CONCEPTS[3].description}
+            <CoreConcept title = {CORE_PROJECTS[3].title}
+                           image = {CORE_PROJECTS[3].image}
+                           description = {CORE_PROJECTS[3].description}
             />
           
           </ul>
